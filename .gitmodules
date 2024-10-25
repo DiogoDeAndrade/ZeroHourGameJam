@@ -1,3 +1,7 @@
 [submodule "Assets/Externals/UnityCommon"]
 	path = Assets/Externals/UnityCommon
 	url = https://github.com/DiogoDeAndrade/UnityCommon
+[submodule "Assets/Externals/OkapiKit"]
+	path = Assets/Externals/OkapiKit
+	url = https://github.com/VideojogosLusofona/OkapiKit
+	branch = upm
