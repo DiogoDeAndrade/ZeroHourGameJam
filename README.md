@@ -1,14 +1,21 @@
-# ZERO HOUR
+# TRIANGLE TREASURE
 
 Developed for the [Zero Hour Game Jam](https://itch.io/jam/zero-hour-game-jam-2024), in one hour.
 The only thing that was setup before hand was this repo, creating a Unity project and adding my favorite submodules/packages.
 
+![Gameplay](Screenshots/screen01.png)
+
 ## Game
+
+Just press space bar to jump in the direction you're aiming, catch all the coins.
 
 ## Art
 
+* All art by me, except title/game over, done with ChatGPT.
 
 ## Sound
+
+* Done using BXFR
 
 ## Code
 
