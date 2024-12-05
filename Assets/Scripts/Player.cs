@@ -17,7 +17,16 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        
+        if (rb.simulated)
+        {
+            if (rb.linearVelocity.magnitude < 1e-6)
+            {
+                rb.simulated = false;
+                rb.linearVelocity = Vector2.zero;
+
+                arrow.Activate();
+            }
+        }
     }
 
     public void Bounce()
@@ -37,6 +46,7 @@ public class Player : MonoBehaviour
             rb.linearVelocity = Vector2.zero;
 
             var contact = collision.GetContact(0);
+            transform.position = contact.point;
             transform.rotation = Quaternion.LookRotation(Vector3.forward, contact.normal);
 
             arrow.Activate();
@@ -48,7 +58,7 @@ public class Player : MonoBehaviour
         var coin = collision.GetComponent<Coin>();
         if (coin != null)
         {
-            SoundManager.PlaySound(coinPickup, 1.0f, Random.Range(0.8f, 1.2f));
+            SoundManager.PlaySound(SoundType.PrimaryFX, coinPickup, 1.0f, Random.Range(0.8f, 1.2f));
             Destroy(coin.gameObject);
         }
     }
